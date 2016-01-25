@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
         		jQuery('.page-content').prepend(jQuery('#conv-buttons'));
     			is_moved = true;
         } else if (jqMoveUpdateSize() > 760 && is_moved){
-        		jQuery('.widget-1').prepend(jQuery('#conv-buttons'));
+        		jQuery('aside.right .widget-1').prepend(jQuery('#conv-buttons'));
     			is_moved = false;
         }
     });
