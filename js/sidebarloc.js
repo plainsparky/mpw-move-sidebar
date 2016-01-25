@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
     	is_moved = true;
     }
     jQuery(window).resize(function() {
-        if (jqMoveUpdateSize() < 761 && !moved){
+        if (jqMoveUpdateSize() < 761 && !is_moved){
                 console.log('resize small not moved');
         		jQuery('.page-content').prepend(jQuery('#conv-buttons'));
     			is_moved = true;
