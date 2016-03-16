@@ -13,6 +13,9 @@ jQuery(document).ready(function(){
         if (jQuery('article.accordion').length) {
             jQuery('article.accordion').prepend(jQuery('.contact-widget'));
     	    is_moved = true;
+        } else  if (jQuery('#myTab').length) {
+            jQuery('#myTab').prepend(jQuery('.contact-widget'));
+    	    is_moved = true;
         }
     }
     jQuery(window).resize(function() {
@@ -20,6 +23,9 @@ jQuery(document).ready(function(){
             if (jQuery('article.accordion').length) {
         		jQuery('article.accordion').prepend(jQuery('.contact-widget'));
     			is_moved = true;
+            } else  if (jQuery('#myTab').length) {
+                jQuery('#myTab').prepend(jQuery('.contact-widget'));
+    	        is_moved = true;
             }
         } else if (jqMoveUpdateSize() > 760 && is_moved){
         		jQuery('.sidebar').append(jQuery('.contact-widget'));
