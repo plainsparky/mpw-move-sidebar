@@ -10,13 +10,17 @@ jQuery(document).ready(function(){
     var width = jqMoveUpdateSize();
     if (width < 761){
         console.log('mobile');
-        jQuery('article.accordion').prepend(jQuery('#text-41'));
-    	is_moved = true;
+        if (jQuery('article.accordion').length) {
+            jQuery('article.accordion').prepend(jQuery('#text-41'));
+    	    is_moved = true;
+        }
     }
     jQuery(window).resize(function() {
         if (jqMoveUpdateSize() < 761 && !is_moved){
+            if (jQuery('article.accordion').length) {
         		jQuery('article.accordion').prepend(jQuery('#text-41'));
     			is_moved = true;
+            }
         } else if (jqMoveUpdateSize() > 760 && is_moved){
         		jQuery('.sidebar').append(jQuery('#text-41'));
     			is_moved = false;
