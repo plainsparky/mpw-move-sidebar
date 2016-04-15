@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
     }
     jQuery(window).resize(function() {
         if (jqMoveUpdateSize() < 761 && !is_moved){
-        		jQuery('.page-content').prepend(jQuery('#conv-buttons'));
+        		jQuery('.post-content').prepend(jQuery('#conv-buttons'));
     			is_moved = true;
         } else if (jqMoveUpdateSize() > 760 && is_moved){
         		jQuery('#conv-buttons-container').prepend(jQuery('#conv-buttons'));
