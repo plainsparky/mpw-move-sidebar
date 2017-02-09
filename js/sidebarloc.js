@@ -1,8 +1,7 @@
 
 function jqMoveUpdateSize(){
     // Get the dimensions of the viewport
-    var width = jQuery(window).width();
-    var height = jQuery(window).height();
+    var width = window.innerWidth;
     return width;
 };
 var is_moved = false;
