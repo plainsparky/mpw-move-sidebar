@@ -8,17 +8,17 @@ function jqMoveUpdateSize(){
 var is_moved = false;
 jQuery(document).ready(function(){
     var width = jqMoveUpdateSize();
-    if (width < 761){
+    if (width < 768){
         console.log('mobile');
-        jQuery('.page-content').prepend(jQuery('#conv-buttons'));
+        jQuery('.content-container').prepend(jQuery('.sidebar-container'));
     	is_moved = true;
     }
     jQuery(window).resize(function() {
-        if (jqMoveUpdateSize() < 761 && !is_moved){
-        		jQuery('.page-content').prepend(jQuery('#conv-buttons'));
+        if (jqMoveUpdateSize() < 768 && !is_moved){
+        		jQuery('.content-container').prepend(jQuery('.sidebar-container'));
     			is_moved = true;
-        } else if (jqMoveUpdateSize() > 760 && is_moved){
-        		jQuery('aside.right .widget-1').prepend(jQuery('#conv-buttons'));
+        } else if (jqMoveUpdateSize() > 767 && is_moved){
+        		jQuery('article .hentry').prepend(jQuery('.sidebar-container'));
     			is_moved = false;
         }
     });
