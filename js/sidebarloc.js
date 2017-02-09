@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
         		jQuery('.content-container').prepend(jQuery('.sidebar-container'));
     			is_moved = true;
         } else if (jqMoveUpdateSize() > 767 && is_moved){
-        		jQuery('article .hentry').append(jQuery('.sidebar-container'));
+        		jQuery('article.hentry').append(jQuery('.sidebar-container'));
     			is_moved = false;
         }
     });
